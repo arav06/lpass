@@ -85,7 +85,7 @@ while True:
                   print(Fore.GREEN+"exit - Exit the program\n") 
                   print(Fore.GREEN+"view - Displays the vault \n")    
                   print(Fore.GREEN+"add - Adds title,website,username and password which is provided, to the vault\n")
-                  print(Fore.GREEN+"generate - Generates a secure password")
+                  print(Fore.GREEN+"generate - Generates a secure password\n")
                   print(Fore.GREEN+"clear - Clears the screen")
 
 
