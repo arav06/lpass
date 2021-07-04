@@ -57,7 +57,7 @@ try:
 
 
 except:
-      print(Fore.RED+"\n[+]An error has occured")
+      print(Fore.RED+"\n[+]An error has occured :(")
       exit()
 print(Fore.GREEN+f"\n[+]Hey {gp.getuser()}, type 'help' to get started!")
 while True:
