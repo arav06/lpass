@@ -21,6 +21,7 @@
 ## Installation
 
 ```bash
+pip install -r requirements.txt
 python setup.py
 ```
 Once the setup script has finished the installation, run the lpass script
