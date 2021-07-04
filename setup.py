@@ -19,8 +19,8 @@ if answer == "y":
       vault = open('LPass.csv','wb')
       fr = frt(secretKey)
       r = f"""
-      Name,Username,Password
-      LPass,{gp.getuser()},{secretKey}
+      Name,Website,Username,Password
+      LPass,N/A,{gp.getuser()},{secretKey}
       """
       encrypted = fr.encrypt(r.encode())
       with open('LPass.csv', 'wb') as encrypted_file:
