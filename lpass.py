@@ -21,7 +21,7 @@ banner = """
 """
 
 print(banner+"\n\n")
-print("Welcome to LPass, a command line password manager. \nType 'help' to get started\n")
+print("Welcome to LPass, a command line password manager. \n")
 
 keyLocation = str(input("[+]Enter the location of the key file> "))
 keyInput = keyLocation.strip()
@@ -59,7 +59,7 @@ try:
 except:
       print(Fore.RED+"\n[+]An error has occured")
       exit()
-print(Fore.GREEN+f"\n[+]Hey {gp.getuser()}!")
+print(Fore.GREEN+f"\n[+]Hey {gp.getuser()}, type 'help' to get started!")
 while True:
 
 
@@ -92,7 +92,7 @@ while True:
 
             elif cmd == "view":
                   print("\n")
-                  print(Fore.GREEN+"Your Vault: \n")
+                  print(Fore.GREEN+"[+]Your Vault: \n")
                   try:
                         keyfile = open(keyInput,'rb')
                         key = keyfile.read()
@@ -132,10 +132,10 @@ while True:
                   password = str(gp.getpass(prompt='Enter the password\n> '))
                   print("\n")
                   print(Fore.GREEN+f"Name:{name}\nWebsite:{website}\nUsername:{username}\nPassword:{password}")
-                  confirm = str(input("\n[+]Are you sure you wish to the following login credentials(y or n): "))
+                  confirm = str(input("\n[+]Are you sure you wish to add the following login credentials(y or n): "))
                   
                   if confirm.lower() == "n":
-                        print(Fore.RED+f"\n[+]Not saving login credentials for {name}")
+                        print(Fore.RED+f"\n[+]Not adding login credentials for {name}")
 
                   elif confirm.lower() == "y":
                         try:
@@ -178,9 +178,9 @@ while True:
 
                         with open('LPass.csv', 'wb') as encrypted_file:
                               encrypted_file.write(encrypted_data)
-                        print(Fore.GREEN+f"\n[+]Login credentials for {name} have been saved")
+                        print(Fore.GREEN+f"\n[+]Login credentials for {name} have been added")
                   else:
-                        print(Fore.RED+"\n[+]Invalid Input")
+                        print(Fore.RED+f"\n[+]Invalid Input, not adding credentials for {name}")
 
 
             elif cmd == "":
