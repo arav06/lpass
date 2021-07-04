@@ -59,7 +59,7 @@ try:
 except:
       print(Fore.RED+"\n[+]An error has occured")
       exit()
-print(Fore.GREEN+f"\n[+]Hey {gp.getuser()}!!")
+print(Fore.GREEN+f"\n[+]Hey {gp.getuser()}!")
 while True:
 
 
@@ -194,11 +194,16 @@ while True:
                         os.system('clear')
 
             elif cmd == "generate":
-                  print("\n")
-                  length = int(input("Enter the length\n> "))
-                  password = ''.join(random.choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k=length))
-                  print(Fore.GREEN+f"\n[+]Your secure password is:")
-                  print(f"\n\n{password}")
+                  print(Fore.GREEN+"[+]Generate a secure password\n\n")
+                  try:
+                        length = int(input("Enter the length\n> "))
+                        
+                        password = ''.join(random.choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k=length))
+                        print(Fore.GREEN+f"\n[+]Your secure password is:")
+                        print(f"\n\n{password}")
+                  except :
+                        print(Fore.RED+"\n[+]Invalid Input")
+
 
             else:
                   print(Fore.RED+"\n[+]Invalid Command")
