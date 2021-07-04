@@ -195,7 +195,7 @@ while True:
 
             elif cmd == "generate":
                   print("\n")
-                  length = int(input("Enter the length> "))
+                  length = int(input("Enter the length\n> "))
                   password = ''.join(random.choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k=length))
                   print(Fore.GREEN+f"\n[+]Your secure password is:")
                   print(f"\n\n{password}")
