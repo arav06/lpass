@@ -128,7 +128,7 @@ while True:
                   print("\n")
                   username = str(input("Enter the username\n>"))
                   print("\n")
-                  print("For security, you will not be able to see the password you type\n")
+                  print("For your security, you will not be able to see the password you type\n")
                   password = str(gp.getpass(prompt='Enter the password\n> '))
                   print("\n")
                   print(Fore.GREEN+f"Name:{name}\nWebsite:{website}\nUsername:{username}\nPassword:{password}")
