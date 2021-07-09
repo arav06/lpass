@@ -1,4 +1,3 @@
-
 import os
 import getpass as gp
 from time import sleep
@@ -34,7 +33,7 @@ if answer == "y":
       fr = frt(secretKey)
       r = f"""
       Name,Website,Username,Password
-      LPass,N/A,{gp.getuser()},{secretKey}
+      LPass,N/A,{gp.getuser()},{secretKey.decode()}
       """
       encrypted = fr.encrypt(r.encode())
       with open('LPass.csv', 'wb') as encrypted_file:
