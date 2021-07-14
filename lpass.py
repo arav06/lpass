@@ -12,17 +12,16 @@ import os
 
 
 banner = """
-
-██╗░░░░░██████╗░░█████╗░░██████╗░██████╗
-██║░░░░░██╔══██╗██╔══██╗██╔════╝██╔════╝
-██║░░░░░██████╔╝███████║╚█████╗░╚█████╗░
-██║░░░░░██╔═══╝░██╔══██║░╚═══██╗░╚═══██╗
-███████╗██║░░░░░██║░░██║██████╔╝██████╔╝
-╚══════╝╚═╝░░░░░╚═╝░░╚═╝╚═════╝░╚═════╝░
+██╗     ██████╗  █████╗  ██████╗ ██████╗
+██║     ██╔══██╗██╔══██╗██╔════╝██╔════╝
+██║     ██████╔╝███████║╚█████╗ ╚█████╗
+██║     ██╔═══╝ ██╔══██║ ╚═══██╗ ╚═══██╗
+███████╗██║     ██║  ██║██████╔╝██████╔╝
+╚══════╝╚═╝     ╚═╝  ╚═╝╚═════╝ ╚═════╝
 """
 
 print(banner+"\n\n")
-print("Welcome to LPass, a command line password manager. \n")
+print("Welcome to Lame Pass, a command line password manager. \n")
 vault = "LPass.csv"
 keyLocation = str(input("[+]Enter the location of the key file> "))
 keyInput = keyLocation.strip()
@@ -118,15 +117,18 @@ def viewVault(vlt):
 def helpMenu():
       helpmenu = """
       
-      █░░ █▀█ ▄▀█ █▀ █▀   █░█ █▀▀ █░░ █▀█   █▀▄▀█ █▀▀ █▄░█ █░█
-      █▄▄ █▀▀ █▀█ ▄█ ▄█   █▀█ ██▄ █▄▄ █▀▀   █░▀░█ ██▄ █░▀█ █▄█
+
+
+       █     █▀▀█ █▀▀█ █▀▀ █▀▀    █  █ █▀▀ █   █▀▀█    █▀▄▀█ █▀▀ █▀▀▄ █  █ 
+       █     █▄▄█ █▄▄█ ▀▀█ ▀▀█    █▀▀█ █▀▀ █   █  █    █ █ █ █▀▀ █  █ █  █ 
+       █▄▄█  █    ▀  ▀ ▀▀▀ ▀▀▀    █  █ ▀▀▀ ▀▀▀ █▀▀▀    █   █ ▀▀▀ ▀  ▀  ▀▀▀
 
       """
       print(f"\n{helpmenu} \n\n")
-      print(Fore.GREEN+"help - Prints the manual\n")
+      print(Fore.GREEN+"help - Displays the help menu\n")
       print(Fore.GREEN+"exit - Exit the program\n") 
-      print(Fore.GREEN+"view - Displays the vault \n")    
-      print(Fore.GREEN+"add - Adds title,website,username and password which is provided, to the vault\n")
+      print(Fore.GREEN+"view - Displays the contents of vault \n")    
+      print(Fore.GREEN+"add - Adds name,website,username and password which is provided, to the vault\n")
       print(Fore.GREEN+"generate - Generates a secure password\n")
       print(Fore.GREEN+"clear - Clears the screen")
 
