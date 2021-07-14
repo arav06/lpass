@@ -1,4 +1,3 @@
-
 import os
 import getpass as gp
 from time import sleep
@@ -21,7 +20,7 @@ if answer == "y":
       colorama.init(autoreset=True)
       print(Fore.LIGHTGREEN_EX+"\n[+]Modules have been installed\n")
       sleep(5)
-      print(Fore.GREEN+"\n[+]Generating secret key. Store this file in a safe location as this is used to open the password vault ")
+      print(Fore.GREEN+"\n[+]Generating secret key. Store this file in a safe location as this is used to unlock the vault ")
       sleep(3)
       secretKey = frt.generate_key()
       keyFile = open(filename,'wb')
@@ -42,7 +41,7 @@ if answer == "y":
       print(Fore.LIGHTGREEN_EX+"\n[+]Vault has been created\n\n")
       sleep(3)
       print(Fore.LIGHTGREEN_EX+"[+]Setup is completed!\n")
-      print(Fore.LIGHTGREEN_EX+f"[+]You vault is LPass.csv and your key file is {filename}.DO NOT RENAME THESE FILES.")
+      print(Fore.LIGHTGREEN_EX+f"[+]You vault is LPass.csv and your key file is {filename}.DO NOT RENAME THESE FILES.\n")
       print(Fore.LIGHTGREEN_EX+"[+]You can now get into your vault by running the lpass script :)\n")
 elif answer == "n":
       print("\n\n[+]Not proceeding with the setup")
