@@ -1,4 +1,4 @@
-import os
+from os import system
 import getpass as gp
 from time import sleep
 print("\n[+]Welcome to Lame Pass, a local command line password manager \n\n")
@@ -11,22 +11,31 @@ answer = ask.lower()
 if answer == "y":
       print("\n[+]Installing required modules\n")
       sleep(2)
-      os.system("pip install colorama")
-      os.system("pip install cryptography")
-      os.system("pip install pandas")
+      try:
+            import cryptography
+      except:
+            system("pip install cryptography")
+      try:
+            import colorama
+      except:
+            system("pip install colorama")
+      try:
+            import pandas
+      except:
+            system("pip install pandas")
       from cryptography.fernet import Fernet as frt
       import colorama
       from colorama import Fore
       colorama.init(autoreset=True)
       print(Fore.LIGHTGREEN_EX+"\n[+]Modules have been installed\n")
-      sleep(5)
+      sleep(3)
       print(Fore.GREEN+"\n[+]Generating secret key. Store this file in a safe location as this is used to unlock the vault ")
       sleep(3)
       secretKey = frt.generate_key()
       keyFile = open(filename,'wb')
       keyFile.write(secretKey)
       print(Fore.LIGHTGREEN_EX+f"\n[+]Secret key has been generated and is stored in ./{filename}\n")
-      sleep(5)
+      sleep(3)
       print(Fore.GREEN+"[+]Creating Vault")
       sleep(2)
       vault = open('LPass.csv','wb')
