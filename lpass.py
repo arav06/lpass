@@ -132,18 +132,22 @@ def helpMenu():
       print(Fore.GREEN+"generate - Generates a secure password\n")
       print(Fore.GREEN+"clear - Clears the screen")
 
-
+      
 def passGen():
       print(Fore.GREEN+"[+]Generate a secure password\n\n")
       try:
             length = int(input("Enter the length\n> "))
+            if length>0 and length<=80:
             
-            password = ''.join(random.choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k=length))
-            print(Fore.GREEN+f"\n[+]Your secure password is:")
-            print(f"\n\n{password}")
+                  password = ''.join(choices(string.ascii_uppercase + string.digits + string.ascii_lowercase, k=length))
+                  print(Fore.GREEN+f"\n[+]Your secure password is:")
+                  print(f"\n\n{password}")
+            else:
+                  print(Fore.RED+"\n[+]Sorry, the minimum length is 1 and maximum length is 80 :(")
       except :
             print(Fore.RED+"\n[+]Invalid Input")
 
+            
 
 try:
       keyfile = open(keyInput,'rb')
